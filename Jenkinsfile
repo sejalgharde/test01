@@ -20,7 +20,7 @@ pipeline {
         	sh 'cp target/test01.war /home/sejal/Documents/devops-software/apache-tomcat-9.0.82/webapps'
         	echo "deployment has been done on QA!"
 			 }
-			else ( env.ENVIRONMENT == 'UAT' ){
+			ifelse ( env.ENVIRONMENT == 'UAT' ){
     		sh 'cp target/test01.war /home/sejal/Documents/devops-software/apache-tomcat-9.0.82/webapps'
     		echo "deployment has been done on UAT!"
 			}
